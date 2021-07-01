@@ -1,6 +1,6 @@
 {
-  "name": "typedoc-plugin-pages",
-  "version": "0.0.1",
+  "name": "typedoc-plugin-pages-fork-fork",
+  "version": "0.0.2",
   "description": "A TypeDoc plugin that lets you integrate your own pages into the documentation output",
   "main": "dist/plugin/index.js",
   "files": [
@@ -17,14 +17,15 @@
     "code:build": "tsc",
     "code:clean": "rimraf ./dist/plugin",
     "code:clean:nodemodules": "rimraf node_modules/typedoc-plugin-pages",
-    "code:copy": "copyfiles package.json ./dist/**/* node_modules/typedoc-plugin-pages/",
+    "code:copy": "copyfiles package.json \"./dist/**/*\" node_modules/typedoc-plugin-pages/",
     "theme:clean": "rimraf ./dist/theme",
-    "theme:copy": "copyfiles ./theme/**/* ./dist/theme -u 1",
+    "theme:copy": "copyfiles \"./theme/**/*\" ./dist/theme -u 1",
     "test": "npm run test.lint && npm run test.unit && npm run test.integration",
     "test.integration": "jest --config ./jest.config.integration.js --runInBand",
     "test.lint": "eslint --ext .js,.ts src",
     "test.unit": "jest --config ./jest.config.unit.js --runInBand",
-    "test.unit.watch": "jest --config ./jest.config.unit.js --watchAll"
+    "test.unit.watch": "jest --config ./jest.config.unit.js --watchAll",
+    "prepack": "npm run build"
   },
   "repository": {
     "type": "git",

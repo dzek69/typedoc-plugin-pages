@@ -53,7 +53,7 @@ export class IndexDataManager {
 	}
 
 	private _addPageToIndex(index: IndexData, page: PageBase): void {
-		const highestRowId = index.rows[index.rows.length - 1].id;
+		const highestRowId = index.rows[index.rows.length - 1]?.id ?? 0;
 		const row: IndexDataRow = {
 			id: highestRowId + 1,
 			kind: 1,
@@ -65,7 +65,7 @@ export class IndexDataManager {
 			pagesPluginParent: page.parent.title + " / ",
 		};
 		index.rows.push(row);
-	
+
 		if (page instanceof Page) {
 			for (const childItem of page.children) {
 				if (childItem instanceof PageBase) {
