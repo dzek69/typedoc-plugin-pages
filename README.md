@@ -3,7 +3,10 @@
 Fork of the fork ¯\_(ツ)_/¯
 
 First [fork][1] [fixes][2] [support for newest typedoc][3],
-this fork fixes crash when there is nothing to generate from the code - just tutorial files + build & publishing.
+this fork fixes
+- crash when there is nothing to generate from the code - just tutorial files
+- building & publishing
+- `Partial mapped could not be found` on some specific code
 
 > A TypeDoc plugin that lets you integrate your own pages into the documentation output
 

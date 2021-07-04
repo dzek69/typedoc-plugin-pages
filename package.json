@@ -1,6 +1,6 @@
 {
   "name": "typedoc-plugin-pages-fork-fork",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A TypeDoc plugin that lets you integrate your own pages into the documentation output",
   "main": "dist/plugin/index.js",
   "files": [
